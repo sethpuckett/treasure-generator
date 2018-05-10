@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  dice-roller:
+    build: .
+    ports:
+      - "5001:80"
