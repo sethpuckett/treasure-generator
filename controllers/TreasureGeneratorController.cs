@@ -12,7 +12,7 @@ namespace DiceRoller.Controllers
     [HttpGet]
     public IActionResult GetTreasure()
     {
-      var baseUrl = "http://dice-roller/dice?sides=20&rolls=50&count=2";
+      var baseUrl = "http://dice-roller/dice?sides=20&rolls=1&count=2";
       using (var client = new HttpClient())
       {
         var result = client.GetStringAsync(baseUrl).Result;
