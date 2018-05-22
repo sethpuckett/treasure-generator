@@ -4,10 +4,10 @@ using System.Net.Http;
 using System.Runtime.Serialization.Json;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DiceRoller.Controllers
+namespace GmTools.TreasureGenerator.Controllers
 {
   [Route("/treasure")]
-  public class DiceRollerController : Controller
+  public class TreasureGeneratorController : Controller
   {
     [HttpGet]
     public IActionResult GetTreasure()

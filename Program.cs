@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace treasure_generator
+namespace GmTools.TreasureGenerator
 {
     public class Program
     {

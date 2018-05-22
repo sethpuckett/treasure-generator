@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace treasure_generator
+namespace GmTools.TreasureGenerator
 {
     public class Startup
     {
