@@ -32,6 +32,7 @@ namespace GmTools.TreasureGenerator.Domain.Services
         if (roll >= potentialTreasure.Min && roll <= potentialTreasure.Max)
         {
           var amount = this.diceRoller.GetRoll(potentialTreasure.TreasureDiceCount, potentialTreasure.TreasureDiceSides);
+          amount *= potentialTreasure.Multiplier;
 
           switch (potentialTreasure.treasureType)
           {
