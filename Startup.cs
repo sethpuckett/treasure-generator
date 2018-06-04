@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GmTools.TreasureGenerator.Domain;
 using GmTools.TreasureGenerator.Domain.Services;
+using GmTools.TreasureGenerator.Gateways;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -20,6 +21,7 @@ namespace GmTools.TreasureGenerator
             services.AddMvc();
 
             services.AddTransient<IIndividualTreasureService, IndividualTreasureService>();
+            services.AddTransient<IDiceRollerGateway, DiceRollerGateway>();
 
         }
 

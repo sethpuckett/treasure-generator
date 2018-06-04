@@ -21,7 +21,11 @@ namespace GmTools.TreasureGenerator.Controllers
     [HttpGet]
     public IActionResult GetIndividualTreasure(int cr)
     {
-      return Ok(0);
+      var response = this.IndividualTreasureService.GenerateIndividualTreasure(cr);
+
+      // TODO: error handling
+
+      return Ok(response.TreasureHaul);
     }
   }
 }

@@ -4,6 +4,6 @@ namespace GmTools.TreasureGenerator.Gateways
 {
   public interface IDiceRollerGateway
   {
-    Task<int> GetRoll(int count, int sides);
+    int GetRoll(int count, int sides);
   }
 }

@@ -4,6 +4,12 @@ namespace GmTools.TreasureGenerator.Domain.Model
 {
   public class TreasureHaul
   {
+    public TreasureHaul()
+    {
+      this.TreasureObjects = new List<TreasureObject>();
+      this.MagicItems = new List<MagicItem>();
+    }
+
     public int CP { get; set; }
     public int SP { get; set; }
     public int GP { get; set; }
