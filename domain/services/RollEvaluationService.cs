@@ -16,11 +16,42 @@ namespace GmTools.TreasureGenerator.Domain.Services
 
     public TreasureHaul Evaluate(RollEvaluationCriteria criteria)
     {
+      var haul = new TreasureHaul();
       var typeRoll = diceRoller.GetRoll(criteria.DiceCount, criteria.DiceSides);
 
-      // TODO: loop through potential treasureas and apply to haul
+      foreach (var potentialTreasure in criteria.PotentialTreasures)
+      {
+        evaluateIndividualPotentialTreasure(potentialTreasure, haul, typeRoll);
+      }
 
-      throw new NotImplementedException();
+      return haul;
+    }
+
+    private void evaluateIndividualPotentialTreasure(PotentialTreasure potentialTreasure, TreasureHaul haul, int roll)
+    {
+        if (roll >= potentialTreasure.Min && roll <= potentialTreasure.Max)
+        {
+          var amount = this.diceRoller.GetRoll(potentialTreasure.TreasureDiceCount, potentialTreasure.TreasureDiceSides);
+
+          switch (potentialTreasure.treasureType)
+          {
+            case TreasureType.CP:
+              haul.CP += amount;
+              break;
+            case TreasureType.SP:
+              haul.SP += amount;
+              break;
+            case TreasureType.EP:
+              haul.EP += amount;
+              break;
+            case TreasureType.GP:
+              haul.GP += amount;
+              break;
+            case TreasureType.PP:
+              haul.PP += amount;
+              break;
+          }
+        }
     }
   }
 

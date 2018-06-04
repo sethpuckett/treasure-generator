@@ -5,7 +5,7 @@ namespace GmTools.TreasureGenerator.Domain.Services.Data
 {
   public class PotentialTreasure
   {
-    public PotentialTreasure (uint min, uint max, TreasureType treasureType, uint treasureDiceCount, uint treasureDiceSides)
+    public PotentialTreasure (int min, int max, TreasureType treasureType, int treasureDiceCount, int treasureDiceSides)
     {
       this.Min = min;
       this.Max = max;
@@ -14,10 +14,10 @@ namespace GmTools.TreasureGenerator.Domain.Services.Data
       this.TreasureDiceSides = treasureDiceSides;
     }
 
-    public uint Min { get; private set; }
-    public uint Max { get; private set; }
+    public int Min { get; private set; }
+    public int Max { get; private set; }
     public TreasureType treasureType { get; private set; }
-    public uint TreasureDiceCount { get; private set; }
-    public uint TreasureDiceSides { get; private set; }
+    public int TreasureDiceCount { get; private set; }
+    public int TreasureDiceSides { get; private set; }
   }
 }
