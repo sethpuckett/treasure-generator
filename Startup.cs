@@ -22,6 +22,7 @@ namespace GmTools.TreasureGenerator
 
             services.AddTransient<IIndividualTreasureService, IndividualTreasureService>();
             services.AddTransient<IDiceRollerGateway, DiceRollerGateway>();
+            services.AddTransient<IRollEvaluationService, RollEvaluationService>();
 
         }
 
